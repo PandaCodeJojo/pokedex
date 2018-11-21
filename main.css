@@ -1,0 +1,90 @@
+body{
+      background-image: url(background.jpg);
+      background-size: cover;
+    }
+header img{
+  height: 70px;
+  width: 70px;
+}
+
+#trainer{
+          width:200px;
+          height: 350px;
+          position: absolute;
+          top: 200px;
+          right: 0px;
+        }
+
+.pokeball{
+          width: 50px;
+          height: 50px;
+
+}
+#box {
+        width: 900px;
+        height: 400px;
+        background-color: black;
+        filter: opacity(80%);
+        position: absolute;
+        top: 200px;
+        left: 190px;
+        border-top:  30px groove #CC0000;
+      }
+
+      #poke1{
+              position: absolute;
+              right: 200px;
+              top: 150px;
+
+
+      }
+
+      #poke2{
+              position: absolute;
+              right: 250px;
+              top: 150px;
+
+
+      }
+
+      #luxball{
+                position: absolute;
+                right: 300px;
+                top: 151px;
+      }
+      .minibox{
+          width: 220px;
+          height: 300px;
+          background-color: white;
+          display:inline-grid;
+          position: relative;
+          top: 50px;
+          left: 40px;
+        }
+        .miniminibox{
+          background-color: #B3A125;
+            filter: opacity(100%);
+          width: 220px;
+          height:100px;
+          position: relative;
+          text-align:center;
+          padding-top: 15px;
+          color: #141944;
+          font-weight: bolder;
+          border-top: #CC0000 3px groove;
+          border-bottom: #CC0000 3px groove;
+        opacity: 1;
+
+        }
+      .pic{
+        position:relative;
+        left:50px;
+      }
+.name{background-color:  #CC0000;
+height: auto;
+font-size: 30px;
+text-align: center;
+text-transform: capitalize; }
+
+
+}
