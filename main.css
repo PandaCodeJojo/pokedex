@@ -5,19 +5,63 @@ body{
 header img{
   height: 70px;
   width: 70px;
+  animation: wobble 4s;
 }
 
 #trainer{
-          width:200px;
-          height: 350px;
+          width:150px;
+          height: 250px;
           position: absolute;
-          top: 200px;
-          right: 0px;
+          top: 50px;
+          right: 20px;
+          animation: wobble 8s;
         }
+#trainerbox{
+  background-color: pink;
+  height: 420px;
+  width: 300px;
+  position: relative;
+  left: 945px;
+  top: 120px;
+  border: white 3px groove;
+
+}
+#name{
+  background-color: black;
+  color: pink;
+  width: 40px;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  left: 20px;
+  padding: 5px;
+  border-bottom: white groove 3px;
+  border-left:  white groove 3px;
+  border-right: white groove 3px;
+  font-family: 'Patua One', cursive;
+
+}
+#chat{
+  width:280px;
+  height: 100px;
+  background-color: white;
+  position: relative;
+  top: 80px;
+  left: 10px;
+  text-align: center;
+  font-family: 'Patua One', cursive;
+  font-size: 20px;
+  animation: fade-in-two 5s;
+
+
+}
+
 
 .pokeball{
           width: 50px;
           height: 50px;
+          animation: wobble 10s;
+
 
 }
 #box {
@@ -27,64 +71,90 @@ header img{
         filter: opacity(80%);
         position: absolute;
         top: 200px;
-        left: 190px;
+        left: 50px;
         border-top:  30px groove #CC0000;
       }
 
-      #poke1{
-              position: absolute;
-              right: 200px;
-              top: 150px;
+#poke1{
+      position: absolute;
+      right: 150px;
+      top: 150px;
 
 
-      }
+}
 
-      #poke2{
-              position: absolute;
-              right: 250px;
-              top: 150px;
+#poke2{
+        position: absolute;
+        right: 200px;
+        top: 150px;
 
 
-      }
+}
 
-      #luxball{
-                position: absolute;
-                right: 300px;
-                top: 151px;
-      }
-      .minibox{
-          width: 220px;
-          height: 300px;
-          background-color: white;
-          display:inline-grid;
-          position: relative;
-          top: 50px;
-          left: 40px;
-        }
-        .miniminibox{
-          background-color: #B3A125;
-            filter: opacity(100%);
-          width: 220px;
-          height:100px;
-          position: relative;
-          text-align:center;
-          padding-top: 15px;
-          color: #141944;
-          font-weight: bolder;
-          border-top: #CC0000 3px groove;
-          border-bottom: #CC0000 3px groove;
-        opacity: 1;
-
-        }
-      .pic{
-        position:relative;
-        left:50px;
-      }
-.name{background-color:  #CC0000;
+#luxball{
+          position: absolute;
+          right: 250px;
+          top: 151px;
+}
+.minibox{
+    width: 220px;
+    height: 300px;
+    background-color: white;
+    display:inline-grid;
+    position: relative;
+    top: 50px;
+    left: 40px;
+    animation: fade-in 3s;
+    }
+  .miniminibox{
+    background-color: #B3A125;
+    filter: opacity(100%);
+    width: 220px;
+    height:100px;
+    position: relative;
+    text-align:center;
+    padding-top: 15px;
+    color: #141944;
+    font-weight: bolder;
+    border-top: #CC0000 3px groove;
+    border-bottom: #CC0000 3px groove;
+  opacity: 1;
+  animation: fade-in 5s;
+}
+.pic{
+position:relative;
+left:50px;
+}
+.name{
+background-color:  #CC0000;
 height: auto;
 font-size: 30px;
 text-align: center;
-text-transform: capitalize; }
+text-transform: capitalize;
+}
 
-
+@keyframes fade-in {
+  0%   { opacity: 0;}
+  20% { opacity: 1;}
+  40% { opacity: 0;}
+  60% { opacity: 1;}
+  80% { opacity: 0;}
+  100% { opacity: 1;}
+}
+@keyframes wobble {
+   0% { transform: translateX(0%); }
+   15% { transform: translateX(-25%) rotate(-5deg); }
+   30% { transform: translateX(20%) rotate(3deg); }
+   45% { transform: translateX(-15%) rotate(-3deg); }
+   60% { transform: translateX(10%) rotate(2deg); }
+   75% { transform: translateX(-5%) rotate(-1deg); }
+   100% { transform: translateX(0%); }
+}
+@keyframes fade-in-two {
+  0%   { opacity: 0;}
+  20% { opacity: .2;}
+  40% { opacity: .4;}
+  60% { opacity: .6;}
+  80% { opacity: .8;}
+  100% { opacity: 1;}
 }
