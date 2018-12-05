@@ -2,14 +2,26 @@
 function answer(show_meh){
 console.log(show_meh);
 }
-// class Trainer{
-//   constructor(name){
-//     this.name = name;
-//     this.pokemon = [];
-//   }
-//   get
-// }
-// let Jojo= new Trainer();
+class Trainer{
+  constructor(){
+    this.pokemon=[];
+  }
+  //puts pokemon in class
+  all(){
+    return this.pokemon;
+  }
+  add(fighters){
+    this.pokemon.push(fighters);
+  }
+  get(name){
+    for(let i=0; i<this.pokemon.length; i+=1){
+      if (name === this.pokemon[i].name){
+        return this.pokemon[i];
+      }
+    }
+  }
+}
+let Evelynn = new Trainer();
 class Pokemon {
   constructor(name, sprite, hp, attack, defense, abilities) {
     this.name= name;
@@ -48,47 +60,47 @@ class Pokemon {
   }
 
 }
-axios.get("http://fizal.me/pokeapi/api/v2/name/tyrantrum.json")
-.then(function (answer){
-console.log(answer);
-//let so you can call it later in param
-let name = answer.data.name;
-console.log(answer.data.name);
-let sprite = answer.data.sprites.front_default;
-let hp = answer.data.stats[5].base_stat;
-let attack =  answer.data.stats[4].base_stat;
-let defense = answer.data.stats[3].base_stat;
-let ability =answer.data.abilities[0].ability.name;
-let Tyrantrum = new Pokemon( name, sprite, hp, attack ,defense, ability );
-Tyrantrum.display();
-console.log(Tyrantrum);
-return Tyrantrum;
+axios.get("https://fizal.me/pokeapi/api/v2/name/tyrantrum.json")
+  .then(function (answer){
+  console.log(answer);
+  //let so you can call it later in param
+  let name = answer.data.name;
+  console.log(answer.data.name);
+  let sprite = answer.data.sprites.front_default;
+  let hp = answer.data.stats[5].base_stat;
+  let attack =  answer.data.stats[4].base_stat;
+  let defense = answer.data.stats[3].base_stat;
+  let ability =answer.data.abilities[0].ability.name;
+  let Tyrantrum = new Pokemon( name, sprite, hp, attack ,defense, ability );
+  Tyrantrum.display();
+  console.log(Tyrantrum);
+  return Tyrantrum;
 });
 
-axios.get("http://fizal.me/pokeapi/api/v2/name/entei.json")
-.then(function (answer){
-console.log(answer);
-//let so you can call it later in param
-let name = answer.data.name;
-let sprite = answer.data.sprites.front_default;
-let hp = answer.data.stats[5].base_stat;
-let attack =  answer.data.stats[4].base_stat;
-let defense = answer.data.stats[3].base_stat;
-let ability =answer.data.abilities[0].ability.name
-let Entei = new Pokemon( name, sprite, hp, attack ,defense, ability );
- Entei.display();
+axios.get("https://fizal.me/pokeapi/api/v2/name/entei.json")
+  .then(function (answer){
+  console.log(answer);
+  //let so you can call it later in param
+  let name = answer.data.name;
+  let sprite = answer.data.sprites.front_default;
+  let hp = answer.data.stats[5].base_stat;
+  let attack =  answer.data.stats[4].base_stat;
+  let defense = answer.data.stats[3].base_stat;
+  let ability =answer.data.abilities[0].ability.name
+  let Entei = new Pokemon( name, sprite, hp, attack ,defense, ability );
+   Entei.display();
 })
 
-axios.get("http://fizal.me/pokeapi/api/v2/name/pangoro.json")
-.then(function (answer){
-console.log(answer);
-//let so you can call it later in param
-let name = answer.data.name;
-let sprite = answer.data.sprites.front_default;
-let hp = answer.data.stats[5].base_stat;
-let attack =  answer.data.stats[4].base_stat;
-let defense = answer.data.stats[3].base_stat;
-let ability =answer.data.abilities[0].ability.name
-let Pangoro = new Pokemon( name, sprite, hp, attack ,defense, ability );
-Pangoro.display();
+axios.get("https://fizal.me/pokeapi/api/v2/name/pangoro.json")
+  .then(function (answer){
+  console.log(answer);
+  //let so you can call it later in param
+  let name = answer.data.name;
+  let sprite = answer.data.sprites.front_default;
+  let hp = answer.data.stats[5].base_stat;
+  let attack =  answer.data.stats[4].base_stat;
+  let defense = answer.data.stats[3].base_stat;
+  let ability =answer.data.abilities[0].ability.name
+  let Pangoro = new Pokemon( name, sprite, hp, attack ,defense, ability );
+  Pangoro.display();
 })
